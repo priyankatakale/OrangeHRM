@@ -6,7 +6,7 @@
       <class name="test.org.oragnehrm.AddEmployeeTests">
         <methods>
           <include name="initialize"/>
-          <include name="verifyCreditLoginpage"/>
+          <include name="verifySetData"/>
         </methods>
       </class> <!-- test.org.oragnehrm.AddEmployeeTests -->
     </classes>

@@ -1,11 +1,14 @@
 package test.org.oragnehrm;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import entities.EmployeeDetails;
 import junit.framework.Assert;
 import pageObjects.AddEmployee;
 import pageObjects.EmployeeListPage;
@@ -46,7 +49,7 @@ public class AddEmployeeTests extends basehrm {
 	}
 
 	@SuppressWarnings("deprecation")
-	@Test
+	@Test(enabled = false)
 	public void verifyCreditLoginpage() throws InterruptedException {
 		addemp = new AddEmployee(driver);
 		addemp.getFirstname("ishani");
@@ -60,10 +63,37 @@ public class AddEmployeeTests extends basehrm {
 		addemp.getSavebtn();
 		Thread.sleep(3000);
 		nav.PIMclick();
-		
+
 		EmployeeListPage ep = new EmployeeListPage(driver);
 		Assert.assertEquals("07", ep.searchEmployee("07"));
 
+	}
+
+	@SuppressWarnings("deprecation")
+	@Test(enabled = false)
+	public void verifySearchByEmpId() throws IOException, InterruptedException {
+		nav.PIMclick();
+		/*
+		 * readWriteExcel r = new readWriteExcel(); ArrayList<EmployeeDetails> emplist =
+		 * r.getexcelData(); EmployeeListPage el = new EmployeeListPage(driver); for
+		 * (EmployeeDetails employeeDetails : emplist) { if(!
+		 * employeeDetails.employeeId.equals(el.searchEmployee(employeeDetails.
+		 * employeeId))) {
+		 * 
+		 * } }
+		 */
+		EmployeeListPage el = new EmployeeListPage(driver);
+
+		String empId = readWriteExcel.getcellData(1, 1);
+		Assert.assertEquals(empId, el.searchEmployee(empId));
+	}
+
+	@Test
+	public void verifySetData() throws IOException, InterruptedException {
+		nav.PIMclick();
+		readWriteExcel.setcellData("30", 4, 1);
+		EmployeeListPage el = new EmployeeListPage(driver);
+		Assert.assertEquals("30", el.searchEmployee("30"));
 	}
 
 }

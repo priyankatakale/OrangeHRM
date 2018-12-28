@@ -2,6 +2,7 @@ package test.org.oragnehrm;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -91,7 +92,7 @@ public class EmployeeListTests extends basehrm {
 	}
 
 	
-	@Test(enabled = false)
+	@Test
 	public void verifyAddbtn() throws InterruptedException {
 		el.getEmployeename("Priyanka");
 		el.getEmployeeid("05");
@@ -128,7 +129,8 @@ public class EmployeeListTests extends basehrm {
 		el.getSearchbtn();
 		Assert.assertEquals(el.getTableRecord(), "No Records Found");
 	}
-
+	
+	
 	@AfterTest
 	public void closebrowser() {
 		driver.close();

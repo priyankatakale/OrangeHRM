@@ -30,7 +30,12 @@ public class stepDefination extends basehrm {
 	
 	@Then("^Verify that user is successfully logged in$")
 	public void verify_that_user_is_successfully_logged_in() throws Throwable {
-	
+		throw new PendingException();
 	}
+	
+    @When("^User enters \"([^\"]*)\" and \"([^\"]*)\" and clicks on login button$")
+    public void user_enters_username_and_password_and_clicks_on_login_button(String userName, String password) throws Throwable {
+        throw new PendingException();
+    }
 
 }

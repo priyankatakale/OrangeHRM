@@ -53,11 +53,11 @@ public class EmployeeListPage {
 		WebElement name = driver.findElement(employeename);
 		name.sendKeys(empName);
 		return name;
-
 	}
 
 	public WebElement getEmployeeid(String id) {
 
+		driver.findElement(employeeid).clear();
 		WebElement empIdTextbox = driver.findElement(employeeid);
 		empIdTextbox.sendKeys(id);
 		return empIdTextbox;
@@ -71,7 +71,11 @@ public class EmployeeListPage {
 	}
 
 	public WebElement getRecord() {
-		return driver.findElements(tablerecord).get(1);
+		if (driver.findElements(tablerecord).size() > 1) {
+			return driver.findElements(tablerecord).get(1);
+		} else {
+			return driver.findElement(tablerecord);
+		}
 	}
 
 	public WebElement getReset() {

@@ -2,19 +2,19 @@
 <testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-12-13T17:22:51Z" name="Default suite" finished-at="2018-12-13T17:23:07Z" duration-ms="15442">
+  <suite started-at="2018-12-21T19:05:24Z" name="Default suite" finished-at="2018-12-21T19:05:34Z" duration-ms="10155">
     <groups>
     </groups>
-    <test started-at="2018-12-13T17:22:51Z" name="Default test" finished-at="2018-12-13T17:23:07Z" duration-ms="15442">
+    <test started-at="2018-12-21T19:05:24Z" name="Default test" finished-at="2018-12-21T19:05:34Z" duration-ms="10155">
       <class name="test.org.oragnehrm.AddEmployeeTests">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:test.org.oragnehrm.AddEmployeeTests@10683d9d]" started-at="2018-12-13T12:22:51Z" name="initialize" finished-at="2018-12-13T12:22:59Z" duration-ms="7372" status="PASS">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:test.org.oragnehrm.AddEmployeeTests@3d285d7e]" started-at="2018-12-21T14:05:24Z" name="initialize" finished-at="2018-12-21T14:05:30Z" duration-ms="5868" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="verifyCreditLoginpage()[pri:0, instance:test.org.oragnehrm.AddEmployeeTests@10683d9d]" started-at="2018-12-13T12:22:59Z" name="verifyCreditLoginpage" finished-at="2018-12-13T12:23:07Z" duration-ms="8035" status="PASS">
+        <test-method signature="verifySetData()[pri:0, instance:test.org.oragnehrm.AddEmployeeTests@3d285d7e]" started-at="2018-12-21T14:05:30Z" name="verifySetData" finished-at="2018-12-21T14:05:34Z" duration-ms="4264" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCreditLoginpage -->
+        </test-method> <!-- verifySetData -->
       </class> <!-- test.org.oragnehrm.AddEmployeeTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

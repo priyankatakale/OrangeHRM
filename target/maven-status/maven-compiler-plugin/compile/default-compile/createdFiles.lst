@@ -1,0 +1,8 @@
+test\org\oragnehrm\App.class
+pageObjects\LoginPage.class
+entities\EmployeeDetails.class
+resources\basehrm.class
+pageObjects\NavigationMenuPage.class
+pageObjects\EmployeeListPage.class
+pageObjects\AddEmployee.class
+pageObjects\RecruitmentPage.class
