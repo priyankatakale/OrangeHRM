@@ -45,4 +45,7 @@ public class NavigationMenuPage {
 		driver.findElement(vaccancies_loc).click();
 	}
 
+	public void addEmployee() {
+		driver.findElement(addEmployee).click();
+	}
 }

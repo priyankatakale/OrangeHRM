@@ -56,7 +56,6 @@ public class AddEmployee {
 
 	public void getSavebtn() {
 		driver.findElement(savebtn_loc).click();
-
 	}
 
 	public WebElement getUsername(String Username) {
