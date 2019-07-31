@@ -26,10 +26,10 @@ public class AddEmployeeSteps extends basehrm {
 	@When("^User enters following details$")
 	public void user_enters_following_details_and_clicks_on_save_button(DataTable dt) throws Throwable {
 		List<Map<String, String>> list = dt.asMaps(String.class, String.class);
-		String firstName = list.get(0).get("FirstName");
-		String middleName = list.get(0).get("MiddleName");
-		String lastName = list.get(0).get("LastName");
-		String empId = list.get(0).get("Id");
+		String firstName = list.get(1).get("FirstName");
+		String middleName = list.get(1).get("MiddleName");
+		String lastName = list.get(1).get("LastName");
+		String empId = list.get(1).get("Id");
 
 		emp = new AddEmployee(driver);
 		emp.getFirstname(firstName);
